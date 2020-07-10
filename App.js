@@ -1,39 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import ProductList from './ProductList';
-import { Container,Header,Content,H1,Text } from 'native-base';
+import { Container,Header,Content,Button,Text } from 'native-base';
 
-function formatName(user){
-  return user.firstName + ' ' + user.lastName;
-}
+export default function App(){
 
-export default function App() {
+  const isValid = true;
 
-  const user = {
-    firstName:'Greg',
-    lastName:'Lim'
-  }
-
-  return (
-    <ProductList />
-    // <Container>
-    //   <Header />
-    //   <Content>
-    //     <H1>Hello,</H1>
-    //     <Text> {formatName(user)} </Text>
-    //   </Content>
-    // </Container>
+  return(
+    <Container>
+      <Header />
+      <Content>
+        <Button disabled={!isValid}>
+          <Text>Click Me!</Text>
+        </Button>
+        <Button danger disabled>
+          <Text>Danger</Text>
+        </Button>
+      </Content>
+    </Container>
   );
 }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-//   textStyle:{
-//     fontSize: 50
-//   }
-// });
