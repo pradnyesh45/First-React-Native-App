@@ -1,6 +1,7 @@
-import { StatusBar } from 'expo-status-bar';
+// import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Container,Header,Content,Button,Text } from 'native-base';
+import Rating from './Rating';
+import { Container,Header,Content } from 'native-base';
 
 export default function App(){
 
@@ -10,12 +11,11 @@ export default function App(){
     <Container>
       <Header />
       <Content>
-        <Button disabled={!isValid}>
-          <Text>Click Me!</Text>
-        </Button>
-        <Button danger disabled>
-          <Text>Danger</Text>
-        </Button>
+        <Rating rating="1" />
+        <Rating rating="2" />
+        <Rating rating="3" />
+        <Rating rating="4" />
+        <Rating rating="5" />
       </Content>
     </Container>
   );
