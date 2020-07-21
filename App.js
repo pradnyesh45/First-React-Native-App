@@ -1,22 +1,15 @@
 // import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import Rating from './Rating';
-import { Container,Header,Content } from 'native-base';
+import React from "react";
+import { Container } from "native-base";
+import MyCard from "./MyCard";
 
-export default function App(){
-
-  const isValid = true;
-
-  return(
+export default function App() {
+  return (
     <Container>
-      <Header />
-      <Content>
-        <Rating rating="1" />
-        <Rating rating="2" />
-        <Rating rating="3" />
-        <Rating rating="4" />
-        <Rating rating="5" />
-      </Content>
+      <MyCard>
+        This is a long sentence, and I want to insert content into the Card
+        component from the outside.
+      </MyCard>
     </Container>
   );
 }
