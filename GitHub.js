@@ -11,7 +11,7 @@ function GitHub() {
         console.log(res.data.items);
         setData(res.data.items);
       });
-  }, [searchTerm]);
+  }, []);
 
   return <div></div>;
 }
